@@ -80,6 +80,10 @@
   }
 }
 
+* {
+  transition: 0.15s;
+}
+
 button {
   cursor: pointer;
 }
