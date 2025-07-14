@@ -70,6 +70,16 @@
   --color-yellow-100: #e8e8e8;
 }
 
+@layer utilities {
+  .main-grid {
+    @apply grid grid-cols-1 xl:grid-cols-[1fr_1120px_1fr];
+  }
+
+  .main-cell-position {
+    @apply col-start-1 col-end-2 xl:col-start-2 xl:col-end-3;
+  }
+}
+
 button {
   cursor: pointer;
 }

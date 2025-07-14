@@ -1,7 +1,9 @@
+import { Header } from "@/components/common/Header";
+
 export default function Home() {
   return (
-    <main>
-      <div>Hello world!</div>
+    <main className="min-h-dvh main-grid">
+      <Header />
     </main>
   );
 }
