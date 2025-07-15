@@ -1,9 +1,14 @@
+import { Footer } from "@/components/common/Footer";
 import { Header } from "@/components/common/Header";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
-    </main>
+
+      <main className="min-h-dvh" />
+
+      <Footer />
+    </>
   );
 }

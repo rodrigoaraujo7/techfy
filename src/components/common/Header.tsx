@@ -48,7 +48,7 @@ export const Header = () => {
       </header>
 
       <nav className="hidden bg-dark-1000 w-full h-[48px] md:grid grid-cols-1 xl:grid-cols-[1fr_1120px_1fr]">
-        <div className="flex items-center justify-between gap-12 px-4 py-3 main-cell-position xl:px-0">
+        <div className="flex items-center justify-between gap-4 px-4 py-3 main-cell-position xl:px-0">
           <NavItem>
             <icon.Smartphone size={16} />
             <span className="text-sm">Phones</span>
@@ -64,6 +64,13 @@ export const Header = () => {
           <div className="h-full w-[1px] bg-dark-300" />
 
           <NavItem>
+            <icon.Watch size={16} />
+            <span className="text-sm">Smart Watches</span>
+          </NavItem>
+
+          <div className="h-full w-[1px] bg-dark-300" />
+
+          <NavItem>
             <icon.Headphones size={16} />
             <span className="text-sm">Headphones</span>
           </NavItem>
@@ -71,8 +78,8 @@ export const Header = () => {
           <div className="h-full w-[1px] bg-dark-300" />
 
           <NavItem>
-            <icon.Watch size={16} />
-            <span className="text-sm">Smartwatches</span>
+            <icon.Gamepad size={16} />
+            <span className="text-sm">Gaming</span>
           </NavItem>
         </div>
       </nav>
