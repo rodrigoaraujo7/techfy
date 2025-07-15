@@ -12,8 +12,8 @@ export const Header = () => {
   const [displaySidebar, setDisplaySidebar] = useState<boolean>(false);
 
   return (
-    <>
-      <header className="main-grid bg-white-100 w-full h-[88px]">
+    <header className="fixed top-0 left-0 right-0">
+      <div className="main-grid bg-white-100 w-full h-[88px]">
         <div className="flex items-center justify-between px-4 main-cell-position py-7 xl:px-0">
           <Image
             src={"/logo.png"}
@@ -45,7 +45,7 @@ export const Header = () => {
             onClick={() => setDisplaySidebar(true)}
           />
         </div>
-      </header>
+      </div>
 
       <nav className="hidden bg-dark-1000 w-full h-[48px] md:grid grid-cols-1 xl:grid-cols-[1fr_1120px_1fr]">
         <div className="flex items-center justify-between gap-4 px-4 py-3 main-cell-position xl:px-0">
@@ -85,7 +85,7 @@ export const Header = () => {
       </nav>
 
       {displaySidebar && <Sidebar />}
-    </>
+    </header>
   );
 };
 
