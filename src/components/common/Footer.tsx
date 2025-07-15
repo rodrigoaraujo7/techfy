@@ -17,7 +17,7 @@ export const Footer = () => {
               style={{ filter: "invert(1)" }}
             />
 
-            <p>
+            <p className="font-medium">
               Virtual store for tech products like iPhones and MacBooks, focused
               on a modern look and easy navigation.
             </p>
@@ -26,24 +26,12 @@ export const Footer = () => {
           <ul className="flex flex-col items-center gap-4 sm:items-start">
             <h1 className="text-base font-medium text-white-100">Services</h1>
 
-            <li>
-              <p>Bonus program</p>
-            </li>
-            <li>
-              <p>Gift cards</p>
-            </li>
-            <li>
-              <p>Credit and payment</p>
-            </li>
-            <li>
-              <p>Service contracts</p>
-            </li>
-            <li>
-              <p>Non-cash account</p>
-            </li>
-            <li>
-              <p>Payment</p>
-            </li>
+            <FooterItem>Bonus program</FooterItem>
+            <FooterItem>Gift cards</FooterItem>
+            <FooterItem>Credit and payment</FooterItem>
+            <FooterItem>Service contracts</FooterItem>
+            <FooterItem>Non-cash account</FooterItem>
+            <FooterItem>Payment</FooterItem>
           </ul>
 
           <ul className="flex flex-col items-center gap-4 sm:items-start">
@@ -51,24 +39,12 @@ export const Footer = () => {
               Assistance to the buyer
             </h1>
 
-            <li>
-              <p>Find and order</p>
-            </li>
-            <li>
-              <p>Terms of delivery</p>
-            </li>
-            <li>
-              <p>Exchange and return of goods</p>
-            </li>
-            <li>
-              <p>Guarantee</p>
-            </li>
-            <li>
-              <p>Frequently asked questions</p>
-            </li>
-            <li>
-              <p>Terms of use of the site</p>
-            </li>
+            <FooterItem>Find and order</FooterItem>
+            <FooterItem>Terms of delivery</FooterItem>
+            <FooterItem>Exchange and return of goods</FooterItem>
+            <FooterItem>Guarantee</FooterItem>
+            <FooterItem>Frequently asked questions</FooterItem>
+            <FooterItem>Terms of use of the site</FooterItem>
           </ul>
         </div>
 
@@ -81,3 +57,9 @@ export const Footer = () => {
     </footer>
   );
 };
+
+const FooterItem = ({ children }: { children: React.ReactNode }) => (
+  <li className="font-light cursor-pointer hover:text-white-100">
+    <p>{children}</p>
+  </li>
+);
