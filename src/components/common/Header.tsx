@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="main-grid bg-white-100 w-full h-[88px]">
         <div className="flex items-center justify-between px-4 main-cell-position py-7 xl:px-0">
           <Image
-            src={"/logo.png"}
+            src={"/images/logo.png"}
             alt="techfy-logo"
             width={96}
             height={32}

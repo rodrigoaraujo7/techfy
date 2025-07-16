@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3 md:gap-8 sm:items-start sm:text-start">
           <div className="flex flex-col items-center gap-4 sm:items-start">
             <Image
-              src={"/logo.png"}
+              src={"/images/logo.png"}
               alt="techfy-logo-invert"
               width={96}
               height={32}
