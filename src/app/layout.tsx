@@ -26,9 +26,7 @@ export default function RootLayout({
       <body>
         <Header />
 
-        <main className="min-h-[calc(100dvh-88px)] mt-[88px] md:min-h-[calc(100dvh-136px)] md:mt-[136px]">
-          {children}
-        </main>
+        <main className="mt-[88px] md:mt-[136px]">{children}</main>
 
         <Footer />
       </body>
