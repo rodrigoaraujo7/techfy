@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
             <h2 className="text-lg font-medium text-neutral-300 md:text-sm lg:text-lg">
               Created to change everything for the better. For everyone
             </h2>
-            <button>Shop Now</button>
+            <Button variant={"light"}>Shop Now</Button>
           </div>
 
           <Image
