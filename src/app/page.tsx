@@ -84,15 +84,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3">
+        <div className="hero-cell bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-start lg:px-14">
           <Image
             src={"/images/macbook-air.png"}
             alt="macbook-image"
             width={300}
             height={200}
+            className="lg:absolute"
           />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit">
+          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:w-[360px]">
             <h1 className="text-3xl font-light text-black-500">
               <span className="font-medium">Macbook</span> Air
             </h1>
