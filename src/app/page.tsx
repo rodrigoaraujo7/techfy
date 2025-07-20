@@ -31,7 +31,7 @@ export default function Home() {
 
       <div className="grid grid-cols-1 grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[328px_272px]">
         <div className="hero-cell bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
-          <div className="relative min-w-[200px] min-h-[200px]">
+          <div className="relative min-w-[200px] min-h-[200px] lg:hidden">
             <Image
               src={"/images/apple-airpods-max.png"}
               alt="apple-airpods-max-image"
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
 
         <div className="hero-cell bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
-          <div className="relative min-w-[300px] min-h-[200px]">
+          <div className="relative min-w-[300px] min-h-[200px] lg:hidden">
             <Image
               src={"/images/apple-vision-pro.png"}
               alt="apple-vision-pro-image"
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <div className="hero-cell bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2">
-          <div className="relative min-w-[300px] min-h-[200px]">
+          <div className="relative min-w-[300px] min-h-[200px] lg:hidden">
             <Image
               src={"/images/playstation.png"}
               alt="playstation-image"
