@@ -8,14 +8,14 @@ export const Footer = () => {
       <div className="px-8 py-12 text-sm text-center text-gray-500 main-cell-position xl:px-0">
         <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3 md:gap-8 sm:items-start sm:text-start">
           <div className="flex flex-col items-center gap-4 sm:items-start">
-            <Image
-              src={"/images/logo.png"}
-              alt="techfy-logo-invert"
-              width={96}
-              height={32}
-              priority
-              style={{ filter: "invert(1)" }}
-            />
+            <div className="relative w-[96px] h-[22px] invert">
+              <Image
+                src={"/images/logo.png"}
+                alt="techfy-logo"
+                sizes="(min-width: 1024px) 100px, 100vw"
+                fill
+              />
+            </div>
 
             <p className="font-medium">
               Virtual store for tech products like iPhones and MacBooks, focused
