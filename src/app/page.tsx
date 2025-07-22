@@ -30,17 +30,21 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[328px_272px]">
-        <div className="hero-cell bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3">
-          <div className="relative min-w-[200px] min-h-[200px] lg:hidden">
-            <Image
-              src={"/images/apple-airpods-max.png"}
-              alt="apple-airpods-max-image"
-              sizes="(min-width: 1024px) 245px, 100vw"
-              fill
-            />
-          </div>
+        <div className="hero-cell flex-col justify-center bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+          <Image
+            src={"/images/apple-airpods-max.png"}
+            alt="apple-airpods-max-image"
+            width={200}
+            height={200}
+            className="
+              flex-shrink-0
+              max-w-none
+              w-[200px] h-[200px]
+              lg:w-auto lg:h-[270px]
+            "
+          />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit">
+          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[160px] lg:w-[160px]">
             <h1 className="text-3xl font-light text-black-500">
               Apple AirPods <span className="font-medium">Max</span>
             </h1>
@@ -50,17 +54,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3">
-          <div className="relative min-w-[300px] min-h-[200px] lg:hidden">
-            <Image
-              src={"/images/apple-vision-pro.png"}
-              alt="apple-vision-pro-image"
-              sizes="(min-width: 1024px) 312px, 100vw"
-              fill
-            />
-          </div>
+        <div className="hero-cell flex-col justify-center bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+          <Image
+            src="/images/apple-vision-pro.png"
+            alt="apple-vision-pro-image"
+            width={300}
+            height={200}
+            className="
+              flex-shrink-0
+              max-w-none
+              w-[300px] h-[200px]
+              lg:w-auto lg:h-[190px]
+            "
+          />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit">
+          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[160px] lg:w-[160px]">
             <h1 className="text-3xl font-light text-white-100">
               Apple Vision <span className="font-medium">Pro</span>
             </h1>
@@ -70,17 +78,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2">
-          <div className="relative min-w-[300px] min-h-[200px] lg:hidden">
-            <Image
-              src={"/images/playstation.png"}
-              alt="playstation-image"
-              sizes="(min-width: 1024px) 312px, 100vw"
-              fill
-            />
-          </div>
+        <div className="hero-cell flex-col justify-center bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+          <Image
+            src="/images/playstation.png"
+            alt="playstation-image"
+            width={300}
+            height={200}
+            className="
+              flex-shrink-0
+              max-w-none
+              w-[300px] h-[200px]
+              lg:w-auto lg:h-[340px]
+            "
+          />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:w-[360px]">
+          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[330px] lg:w-[330px]">
             <h1 className="text-3xl font-light text-black-500">
               Playstation <span className="font-medium">5</span>
             </h1>
@@ -91,17 +103,21 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-start lg:px-14">
-          <div className="relative min-w-[300px] min-h-[200px]">
-            <Image
-              src={"/images/macbook-air.png"}
-              alt="macbook-image"
-              sizes="(min-width: 1024px) 300px, 100vw"
-              fill
-            />
-          </div>
+        <div className="hero-cell flex-col justify-center bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-end lg:px-14 lg:overflow-hidden">
+          <Image
+            src="/images/macbook-air.png"
+            alt="macbook"
+            width={300}
+            height={200}
+            className="
+              flex-shrink-0
+              max-w-none
+              w-[300px] h-[200px]
+              lg:w-auto lg:h-[100%]
+            "
+          />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:w-[360px]">
+          <div className="flex flex-col justify-center gap-4 text-center max-w-[420px] md:w-fit lg:text-start lg:min-w-[360px] lg:w-[360px]">
             <h1 className="text-3xl font-light text-black-500">
               <span className="font-medium">Macbook</span> Air
             </h1>
