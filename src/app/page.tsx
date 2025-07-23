@@ -1,7 +1,18 @@
-import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 
+import { Button } from "@/components/ui/Button";
+import { Product } from "@/components/ui/Product";
+
 export default function Home() {
+  return (
+    <>
+      <HeroSection />
+      <ProductsSection />
+    </>
+  );
+}
+
+function HeroSection() {
   return (
     <section>
       <div className="h-[calc(95dvh-88px)] md:h-[calc(95dvh-136px)] px-4 pt-10  bg-black-100 main-grid">
@@ -30,7 +41,7 @@ export default function Home() {
       </div>
 
       <div className="grid grid-cols-1 grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[328px_272px]">
-        <div className="hero-cell flex-col justify-center bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="flex-col justify-center hero-cell bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
           <Image
             src={"/images/apple-airpods-max.png"}
             alt="apple-airpods-max-image"
@@ -54,7 +65,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell flex-col justify-center bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="flex-col justify-center hero-cell bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
           <Image
             src="/images/apple-vision-pro.png"
             alt="apple-vision-pro-image"
@@ -78,7 +89,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell flex-col justify-center bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="flex-col justify-center hero-cell bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
           <Image
             src="/images/playstation.png"
             alt="playstation-image"
@@ -93,7 +104,7 @@ export default function Home() {
           />
 
           <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[330px] lg:w-[330px]">
-            <h1 className="text-3xl font-light text-black-500">
+            <h1 className="text-3xl font-light text-black-500 lg:text-5xl lg:font-medium">
               Playstation <span className="font-medium">5</span>
             </h1>
             <h2 className="text-neutral-300">
@@ -103,7 +114,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-cell flex-col justify-center bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="flex-col justify-center hero-cell bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-end lg:px-14 lg:overflow-hidden">
           <Image
             src="/images/macbook-air.png"
             alt="macbook"
@@ -118,16 +129,45 @@ export default function Home() {
           />
 
           <div className="flex flex-col justify-center gap-4 text-center max-w-[420px] md:w-fit lg:text-start lg:min-w-[360px] lg:w-[360px]">
-            <h1 className="text-3xl font-light text-black-500">
-              <span className="font-medium">Macbook</span> Air
+            <h1 className="text-3xl font-light text-black-500 lg:text-[64px] lg:font-medium">
+              <span className="font-medium lg:font-thin">Macbook</span> Air
             </h1>
             <h2 className="text-neutral-300">
               The new 15-inch MacBook Air makes room for more of what you love
               with a spacious Liquid Retina display.
             </h2>
 
-            <Button variant="dark">Shop Now</Button>
+            <Button variant="dark" className="lg:w-fit">
+              Shop Now
+            </Button>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProductsSection() {
+  return (
+    <section className="min-h-dvh main-grid bg-white-100 py-14">
+      <div className="main-cell-position">
+        <h1>teste</h1>
+
+        <div className="grid grid-cols-2 gap-4 px-4 mt-8 md:grid-cols-3 xl:px-0 lg:grid-cols-4">
+          {Array.from({ length: 8 }).map((_, index) => (
+            <Product.Card key={index}>
+              <Product.FavoriteButton />
+
+              <Product.Title>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
+                doloribus?
+              </Product.Title>
+
+              <Product.Price>200</Product.Price>
+
+              <Product.Button />
+            </Product.Card>
+          ))}
         </div>
       </div>
     </section>
