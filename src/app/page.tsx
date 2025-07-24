@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ProductsSection />
+      <BannerSection />
     </>
   );
 }
@@ -149,11 +150,9 @@ function HeroSection() {
 
 function ProductsSection() {
   return (
-    <section className="min-h-dvh main-grid bg-white-100 py-14">
+    <section className="main-grid bg-white-100 py-14">
       <div className="main-cell-position">
-        <h1>teste</h1>
-
-        <div className="grid grid-cols-2 gap-4 px-4 mt-8 md:grid-cols-3 xl:px-0 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 px-4 md:grid-cols-3 xl:px-0 lg:grid-cols-4">
           {Array.from({ length: 8 }).map((_, index) => (
             <Product.Card key={index}>
               <Product.FavoriteButton />
@@ -169,6 +168,77 @@ function ProductsSection() {
             </Product.Card>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function BannerSection() {
+  return (
+    <section className="grid grid-cols-1 h-fit md:grid-cols-2 lg:grid-cols-4 md:h-[calc(100dvh-136px)]">
+      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-100 lg:text-start py-14 lg:items-start">
+        <Image
+          src="/images/buds.png"
+          alt="macbook"
+          width={300}
+          height={200}
+          className="
+              flex-shrink-0
+              max-w-none
+              w-[300px] h-[200px]
+              lg:w-auto lg:h-[100%]
+            "
+        />
+
+        <h1 className="text-5xl font-light md:text-3xl text-black-500">
+          Popular Products
+        </h1>
+        <h2 className="text-sm font-medium text-neutral-300 md:text-base">
+          iPad combines a magnificent 10.2-inch Retina display, incredible
+          performance, multitasking and ease of use.
+        </h2>
+        <Button variant="dark" size="sm" className="w-fit">
+          Shop Now
+        </Button>
+      </div>
+
+      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-300 lg:text-start py-14 lg:items-start">
+        <h1 className="text-5xl font-light text-black-500 md:text-3xl">
+          Ipad Pro
+        </h1>
+        <h2 className="text-sm font-medium text-neutral-300 md:text-base">
+          iPad combines a magnificent 10.2-inch Retina display, incredible
+          performance, multitasking and ease of use.
+        </h2>
+        <Button variant="dark" size="sm" className="w-fit">
+          Shop Now
+        </Button>
+      </div>
+
+      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-800 lg:text-start py-14 lg:items-start">
+        <h1 className="text-5xl font-light text-black-500 md:text-3xl">
+          Samsung Galaxy{" "}
+        </h1>
+        <h2 className="text-sm font-medium text-neutral-300 md:text-base">
+          iPad combines a magnificent 10.2-inch Retina display, incredible
+          performance, multitasking and ease of use.
+        </h2>
+        <Button variant="dark" size="sm" className="w-fit">
+          Shop Now
+        </Button>
+      </div>
+
+      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-dark-800 lg:text-start py-14 lg:items-start">
+        <h1 className="text-5xl font-light text-white-100 md:text-3xl">
+          Macbook Pro
+        </h1>
+        <h2 className="text-sm font-medium text-neutral-300 md:text-base">
+          iPad combines a magnificent 10.2-inch Retina display, incredible
+          performance, multitasking and ease of use.
+        </h2>
+        <Button variant="light" size="sm" className="w-fit">
+          Shop Now
+        </Button>
       </div>
     </section>
   );
