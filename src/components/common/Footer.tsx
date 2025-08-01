@@ -4,11 +4,11 @@ import * as icon from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="w-full main-grid bg-black-200 h-fit">
-      <div className="px-8 py-12 text-sm text-center text-gray-500 main-cell-position xl:px-0">
-        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3 md:gap-8 sm:items-start sm:text-start">
+    <footer className="main-grid bg-black-200 h-fit w-full">
+      <div className="main-cell-position px-8 py-12 text-center text-sm text-gray-500 xl:px-0">
+        <div className="flex flex-col items-center gap-4 sm:grid sm:grid-cols-3 sm:items-start sm:text-start md:gap-8">
           <div className="flex flex-col items-center gap-4 sm:items-start">
-            <div className="relative w-[96px] h-[22px] invert">
+            <div className="relative h-[22px] w-[96px] invert">
               <Image
                 src={"/images/logo.png"}
                 alt="techfy-logo"
@@ -24,7 +24,7 @@ export const Footer = () => {
           </div>
 
           <ul className="flex flex-col items-center gap-4 sm:items-start">
-            <h1 className="text-base font-medium text-white-100">Services</h1>
+            <h1 className="text-white-100 text-base font-medium">Services</h1>
 
             <FooterItem>Bonus program</FooterItem>
             <FooterItem>Gift cards</FooterItem>
@@ -35,7 +35,7 @@ export const Footer = () => {
           </ul>
 
           <ul className="flex flex-col items-center gap-4 sm:items-start">
-            <h1 className="text-base font-medium text-white-100 font-poppins">
+            <h1 className="text-white-100 font-poppins text-base font-medium">
               Assistance to the buyer
             </h1>
 
@@ -48,7 +48,7 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex items-center justify-center gap-4 mt-8 sm:mt-6 sm:justify-start">
+        <div className="mt-8 flex items-center justify-center gap-4 sm:mt-6 sm:justify-start">
           <icon.Twitter />
           <icon.Facebook />
           <icon.Instagram />
@@ -59,7 +59,7 @@ export const Footer = () => {
 };
 
 const FooterItem = ({ children }: { children: React.ReactNode }) => (
-  <li className="font-light cursor-pointer hover:text-white-100">
+  <li className="hover:text-white-100 cursor-pointer font-light">
     <p>{children}</p>
   </li>
 );

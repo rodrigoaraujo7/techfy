@@ -16,11 +16,11 @@ export default function Home() {
 function HeroSection() {
   return (
     <section>
-      <div className="h-[calc(95dvh-88px)] md:h-[calc(95dvh-136px)] px-4 pt-10  bg-black-100 main-grid">
-        <div className="relative flex justify-center overflow-hidden main-cell-position md:justify-between">
-          <div className="flex flex-col items-center justify-center gap-4 mt-10 text-center self-baseline md:items-baseline md:text-start md:mt-0 md:self-auto">
-            <h2 className="text-xl font-semibold text-dark-100">Pro.Beyond.</h2>
-            <h1 className="text-4xl font-thin text-white-100 md:text-6xl lg:text-8xl">
+      <div className="bg-black-100 main-grid h-[calc(95dvh-88px)] px-4 pt-10 md:h-[calc(95dvh-136px)]">
+        <div className="main-cell-position relative flex justify-center overflow-hidden md:justify-between">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 self-baseline text-center md:mt-0 md:items-baseline md:self-auto md:text-start">
+            <h2 className="text-dark-100 text-xl font-semibold">Pro.Beyond.</h2>
+            <h1 className="text-white-100 text-4xl font-thin md:text-6xl lg:text-8xl">
               IPhone 14 <span className="font-semibold">Pro</span>
             </h1>
             <h2 className="text-lg font-medium text-neutral-300 md:text-sm lg:text-lg">
@@ -29,7 +29,7 @@ function HeroSection() {
             <Button variant={"light"}>Shop Now</Button>
           </div>
 
-          <div className="absolute -bottom-4/5 md:relative md:-bottom-[15%] lg:absolute lg:right-0 lg:-bottom-1/2 min-w-[288] min-h-[789px]">
+          <div className="absolute -bottom-4/5 min-h-[789px] min-w-[288] md:relative md:-bottom-[15%] lg:absolute lg:right-0 lg:-bottom-1/2">
             <Image
               priority
               src={"/images/iphone.png"}
@@ -41,23 +41,18 @@ function HeroSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 grid-rows-4 md:grid-rows-2 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[328px_272px]">
-        <div className="flex-col justify-center hero-cell bg-white-500 lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+      <div className="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-[328px_272px]">
+        <div className="hero-cell bg-white-500 flex-col justify-center lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:overflow-hidden lg:px-14">
           <Image
             src={"/images/apple-airpods-max.png"}
             alt="apple-airpods-max-image"
             width={200}
             height={200}
-            className="
-              flex-shrink-0
-              max-w-none
-              w-[200px] h-[200px]
-              lg:w-auto lg:h-[270px]
-            "
+            className="h-[200px] w-[200px] max-w-none flex-shrink-0 lg:h-[270px] lg:w-auto"
           />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[160px] lg:w-[160px]">
-            <h1 className="text-3xl font-light text-black-500">
+          <div className="flex max-w-[420] flex-col justify-center gap-4 text-center md:w-fit lg:w-[160px] lg:min-w-[160px] lg:text-start">
+            <h1 className="text-black-500 text-3xl font-light">
               Apple AirPods <span className="font-medium">Max</span>
             </h1>
             <h2 className="text-neutral-300">
@@ -66,22 +61,17 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="flex-col justify-center hero-cell bg-dark-700 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="hero-cell bg-dark-700 flex-col justify-center lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:flex-row lg:justify-end lg:overflow-hidden lg:px-14">
           <Image
             src="/images/apple-vision-pro.png"
             alt="apple-vision-pro-image"
             width={300}
             height={200}
-            className="
-              flex-shrink-0
-              max-w-none
-              w-[300px] h-[200px]
-              lg:w-auto lg:h-[190px]
-            "
+            className="h-[200px] w-[300px] max-w-none flex-shrink-0 lg:h-[190px] lg:w-auto"
           />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[160px] lg:w-[160px]">
-            <h1 className="text-3xl font-light text-white-100">
+          <div className="flex max-w-[420] flex-col justify-center gap-4 text-center md:w-fit lg:w-[160px] lg:min-w-[160px] lg:text-start">
+            <h1 className="text-white-100 text-3xl font-light">
               Apple Vision <span className="font-medium">Pro</span>
             </h1>
             <h2 className="text-neutral-300">
@@ -90,22 +80,17 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="flex-col justify-center hero-cell bg-white-100 lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex-row lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="hero-cell bg-white-100 flex-col justify-center lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:flex-row lg:justify-end lg:overflow-hidden lg:px-14">
           <Image
             src="/images/playstation.png"
             alt="playstation-image"
             width={300}
             height={200}
-            className="
-              flex-shrink-0
-              max-w-none
-              w-[300px] h-[200px]
-              lg:w-auto lg:h-[340px]
-            "
+            className="h-[200px] w-[300px] max-w-none flex-shrink-0 lg:h-[340px] lg:w-auto"
           />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420] md:w-fit lg:text-start lg:min-w-[330px] lg:w-[330px]">
-            <h1 className="text-3xl font-light text-black-500 lg:text-5xl lg:font-medium">
+          <div className="flex max-w-[420] flex-col justify-center gap-4 text-center md:w-fit lg:w-[330px] lg:min-w-[330px] lg:text-start">
+            <h1 className="text-black-500 text-3xl font-light lg:text-5xl lg:font-medium">
               Playstation <span className="font-medium">5</span>
             </h1>
             <h2 className="text-neutral-300">
@@ -115,22 +100,17 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="flex-col justify-center hero-cell bg-white-500 lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-end lg:px-14 lg:overflow-hidden">
+        <div className="hero-cell bg-white-500 flex-col justify-center lg:col-start-3 lg:col-end-5 lg:row-start-1 lg:row-end-3 lg:flex-row-reverse lg:justify-end lg:overflow-hidden lg:px-14">
           <Image
             src="/images/macbook-air.png"
             alt="macbook"
             width={300}
             height={200}
-            className="
-              flex-shrink-0
-              max-w-none
-              w-[300px] h-[200px]
-              lg:w-auto lg:h-[100%]
-            "
+            className="h-[200px] w-[300px] max-w-none flex-shrink-0 lg:h-[100%] lg:w-auto"
           />
 
-          <div className="flex flex-col justify-center gap-4 text-center max-w-[420px] md:w-fit lg:text-start lg:min-w-[360px] lg:w-[360px]">
-            <h1 className="text-3xl font-light text-black-500 lg:text-[64px] lg:font-medium">
+          <div className="flex max-w-[420px] flex-col justify-center gap-4 text-center md:w-fit lg:w-[360px] lg:min-w-[360px] lg:text-start">
+            <h1 className="text-black-500 text-3xl font-light lg:text-[64px] lg:font-medium">
               <span className="font-medium lg:font-thin">Macbook</span> Air
             </h1>
             <h2 className="text-neutral-300">
@@ -152,7 +132,7 @@ function ProductsSection() {
   return (
     <section className="main-grid bg-white-100 py-14">
       <div className="main-cell-position">
-        <div className="grid grid-cols-2 gap-4 px-4 md:grid-cols-3 xl:px-0 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 px-4 md:grid-cols-3 lg:grid-cols-4 xl:px-0">
           {Array.from({ length: 8 }).map((_, index) => (
             <Product.Card key={index}>
               <Product.FavoriteButton />
@@ -175,22 +155,11 @@ function ProductsSection() {
 
 function BannerSection() {
   return (
-    <section className="grid grid-cols-1 h-fit md:grid-cols-2 lg:grid-cols-4 md:h-[calc(100dvh-136px)]">
-      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-100 lg:text-start py-14 lg:items-start">
-        <Image
-          src="/images/buds.png"
-          alt="macbook"
-          width={300}
-          height={200}
-          className="
-              flex-shrink-0
-              max-w-none
-              w-[300px] h-[200px]
-              lg:w-auto lg:h-[100%]
-            "
-        />
+    <section className="grid h-fit grid-cols-1 md:h-[calc(100dvh-136px)] md:grid-cols-2 lg:grid-cols-4">
+      <div className="bg-white-100 flex h-full flex-col items-center justify-end gap-4 p-8 py-14 text-center lg:items-start lg:text-start">
+        {/* TODO: ADD IMAGES */}
 
-        <h1 className="text-5xl font-light md:text-3xl text-black-500">
+        <h1 className="text-black-500 text-5xl font-light md:text-3xl">
           Popular Products
         </h1>
         <h2 className="text-sm font-medium text-neutral-300 md:text-base">
@@ -202,8 +171,8 @@ function BannerSection() {
         </Button>
       </div>
 
-      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-300 lg:text-start py-14 lg:items-start">
-        <h1 className="text-5xl font-light text-black-500 md:text-3xl">
+      <div className="bg-white-300 flex h-full flex-col items-center justify-end gap-4 p-8 py-14 text-center lg:items-start lg:text-start">
+        <h1 className="text-black-500 text-5xl font-light md:text-3xl">
           Ipad Pro
         </h1>
         <h2 className="text-sm font-medium text-neutral-300 md:text-base">
@@ -215,8 +184,8 @@ function BannerSection() {
         </Button>
       </div>
 
-      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-white-800 lg:text-start py-14 lg:items-start">
-        <h1 className="text-5xl font-light text-black-500 md:text-3xl">
+      <div className="bg-white-800 flex h-full flex-col items-center justify-end gap-4 p-8 py-14 text-center lg:items-start lg:text-start">
+        <h1 className="text-black-500 text-5xl font-light md:text-3xl">
           Samsung Galaxy{" "}
         </h1>
         <h2 className="text-sm font-medium text-neutral-300 md:text-base">
@@ -228,8 +197,8 @@ function BannerSection() {
         </Button>
       </div>
 
-      <div className="flex flex-col items-center justify-end h-full gap-4 p-8 text-center bg-dark-800 lg:text-start py-14 lg:items-start">
-        <h1 className="text-5xl font-light text-white-100 md:text-3xl">
+      <div className="bg-dark-800 flex h-full flex-col items-center justify-end gap-4 p-8 py-14 text-center lg:items-start lg:text-start">
+        <h1 className="text-white-100 text-5xl font-light md:text-3xl">
           Macbook Pro
         </h1>
         <h2 className="text-sm font-medium text-neutral-300 md:text-base">
