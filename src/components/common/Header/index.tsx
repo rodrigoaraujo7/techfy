@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 
-import { Sidebar } from "./Sidebar";
+import { Sidebar } from "../Sidebar";
 
 import * as icon from "lucide-react";
 
