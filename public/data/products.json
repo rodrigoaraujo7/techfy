@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "image": "/images/products/apple-iphone-14-pro.png",
+    "name": "Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)",
+    "price": 900,
+    "brand": "Apple",
+    "category": "smartphone",
+    "specs": {
+      "screenSize": "6.7\"",
+      "color": "Deep Purple",
+      "storage": "128GB",
+      "camera": "48MP",
+      "battery": "4323 mAh"
+    }
+  },
+  {
+    "id": 2,
+    "image": "/images/products/blackmagic-pocket.png",
+    "name": "Blackmagic Pocket Cinema Camera 6K",
+    "price": 2535,
+    "brand": "Blackmagic Design",
+    "category": "camera",
+    "specs": {
+      "sensor": "Super 35",
+      "resolution": "6K",
+      "mount": "Canon EF",
+      "media": "CFast 2.0 / SD UHS-II"
+    }
+  },
+  {
+    "id": 3,
+    "image": "/images/products/apple-watch-9.png",
+    "name": "Apple Watch Series 9 GPS 41mm Starlight Aluminium Case",
+    "price": 399,
+    "brand": "Apple",
+    "category": "smartwatch",
+    "specs": {
+      "caseSize": "41mm",
+      "color": "Starlight",
+      "display": "Always-On Retina",
+      "battery": "308 mAh"
+    }
+  },
+  {
+    "id": 4,
+    "image": "/images/products/apple-airpods-max-silver.png",
+    "name": "AirPods Max Silver",
+    "price": 549,
+    "brand": "Apple",
+    "category": "headphone",
+    "specs": {
+      "color": "Silver",
+      "connectivity": "Bluetooth 5.0",
+      "noiseCancellation": "Active"
+    }
+  },
+  {
+    "id": 5,
+    "image": "/images/products/samsung-galaxy-watch-6.png",
+    "name": "Samsung Galaxy Watch6 Classic 47mm Black",
+    "price": 369,
+    "brand": "Samsung",
+    "category": "smartwatch",
+    "specs": {
+      "caseSize": "47mm",
+      "color": "Black",
+      "display": "1.5\" Super AMOLED",
+      "battery": "425 mAh"
+    }
+  },
+  {
+    "id": 6,
+    "image": "/images/products/samsung-galaxy-z-fold-5.png",
+    "name": "Galaxy Z Fold5 Unlocked 256GB Phantom Black",
+    "price": 1799,
+    "brand": "Samsung",
+    "category": "smartphone",
+    "specs": {
+      "screenSize": "7.6\" unfolded",
+      "color": "Phantom Black",
+      "storage": "256GB",
+      "camera": "50MP",
+      "battery": "4400 mAh"
+    }
+  },
+  {
+    "id": 7,
+    "image": "/images/products/samsung-galaxy-buds-fe.png",
+    "name": "Galaxy Buds FE Graphite",
+    "price": 99.99,
+    "brand": "Samsung",
+    "category": "earbuds",
+    "specs": {
+      "color": "Graphite",
+      "connectivity": "Bluetooth 5.2",
+      "noiseCancellation": "Active"
+    }
+  },
+  {
+    "id": 8,
+    "image": "/images/products/apple-ipad-9.png",
+    "name": "Apple iPad 9 10.2' 64GB Wi-Fi Silver (MK2L3) 2021",
+    "price": 398,
+    "brand": "Apple",
+    "category": "tablet",
+    "specs": {
+      "screenSize": "10.2\"",
+      "color": "Silver",
+      "storage": "64GB",
+      "battery": "8557 mAh"
+    }
+  },
+  {
+    "id": 9,
+    "image": "/images/products/apple-iphone-11.png",
+    "name": "Apple iPhone 11 128GB White (MQ233)",
+    "price": 510,
+    "brand": "Apple",
+    "category": "smartphone",
+    "specs": {
+      "screenSize": "6.1\"",
+      "color": "White",
+      "storage": "128GB",
+      "camera": "12MP Dual",
+      "processor": "A13 Bionic",
+      "battery": "3110 mAh"
+    }
+  },
+  {
+    "id": 10,
+    "image": "/images/products/apple-iphone-13-mini.png",
+    "name": "Apple iPhone 13 mini 128GB Pink (MLK23)",
+    "price": 850,
+    "brand": "Apple",
+    "category": "smartphone",
+    "specs": {
+      "screenSize": "5.4\"",
+      "color": "Pink",
+      "storage": "128GB",
+      "camera": "12MP Dual",
+      "processor": "A15 Bionic",
+      "battery": "2438 mAh"
+    }
+  }
+]
