@@ -6,6 +6,8 @@ import "./globals.css";
 import { Footer } from "@/components/common/Footer";
 import { Header } from "@/components/common/Header";
 
+import ProductProvider from "@/providers/ProductProvider";
+
 export const metadata: Metadata = {
   title: "Techfy",
   description: "Virtual store for tech products",
@@ -24,11 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <Header />
+        <ProductProvider>
+          <Header />
 
-        <main className="mt-[88px] md:mt-[136px]">{children}</main>
+          <main className="mt-[88px] md:mt-[136px]">{children}</main>
 
-        <Footer />
+          <Footer />
+        </ProductProvider>
       </body>
     </html>
   );
