@@ -23,6 +23,8 @@ export const SectionProducts = () => {
             <Product.Card key={product.id}>
               <Product.FavoriteButton />
 
+              <Product.Image src={product.image} alt={product.name} />
+
               <Product.Title>{product.name}</Product.Title>
 
               <Product.Price>{product.price}</Product.Price>

@@ -16,8 +16,12 @@ The **Product** is a set of reusable components for displaying product informati
 \`\`\`tsx
 <Product.Card>
   <Product.FavoriteButton />
-  <Product.Title>Product Title</Product.Title>
-  <Product.Price>500</Product.Price>
+  <Product.Image
+    src={"/images/products/apple-airpods-max-silver.png"}
+    alt={"Air Pods Max Silver"}
+  />
+  <Product.Title>AirPods Max Silver</Product.Title>
+  <Product.Price>549</Product.Price>
   <Product.Button />
 </Product.Card>
 \`\`\`
@@ -42,8 +46,12 @@ export const Default: Story = {
   render: () => (
     <Product.Card>
       <Product.FavoriteButton />
-      <Product.Title>Product Title</Product.Title>
-      <Product.Price>500</Product.Price>
+      <Product.Image
+        src={"/images/products/apple-airpods-max-silver.png"}
+        alt={"Air Pods Max Silver"}
+      />
+      <Product.Title>AirPods Max Silver</Product.Title>
+      <Product.Price>549</Product.Price>
       <Product.Button />
     </Product.Card>
   ),
