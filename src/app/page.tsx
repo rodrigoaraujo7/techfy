@@ -1,6 +1,6 @@
 import { Section } from "@/components/common/Section";
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Section.Hero />
@@ -9,3 +9,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
