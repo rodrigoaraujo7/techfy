@@ -8,7 +8,12 @@ type ProductImageProps = {
 export const ProductImage = ({ ...props }: ProductImageProps) => {
   return (
     <div className="relative h-[104px] w-[104px] md:h-[160px] md:w-[160px]">
-      <Image src={props.src} alt={props.alt} fill />
+      <Image
+        src={props.src}
+        alt={props.alt}
+        fill
+        sizes="(min-width: 768px) 160px, 104px"
+      />
     </div>
   );
 };
