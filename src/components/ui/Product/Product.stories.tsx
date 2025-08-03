@@ -56,3 +56,7 @@ export const Default: Story = {
     </Product.Card>
   ),
 };
+
+export const Skeleton: Story = {
+  render: () => <Product.Skeleton />,
+};
