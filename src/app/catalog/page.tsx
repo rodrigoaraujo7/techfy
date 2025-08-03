@@ -23,20 +23,29 @@ function Catalog() {
         <div className="main-cell-position mx-4 mt-9 mb-[72px] flex flex-col gap-5 lg:mx-2 lg:my-6 lg:flex-row lg:gap-8 xl:mx-0">
           <div className="h-[64px] w-full bg-red-100 lg:sticky lg:w-[256px]" />
 
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:flex-1">
-            {data?.map((product) => (
-              <Product.Card key={product.id}>
-                <Product.FavoriteButton />
+          <div className="lg:flex-1">
+            <div className="mb-6 flex w-full items-center justify-between">
+              <h1 className="text-dark-200 text-base font-medium">
+                Products Result:{" "}
+                <span className="text-black-500">{data?.length}</span>
+              </h1>
+            </div>
 
-                <Product.Image src={product.image} alt={product.name} />
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {data?.map((product) => (
+                <Product.Card key={product.id}>
+                  <Product.FavoriteButton />
 
-                <Product.Title>{product.name}</Product.Title>
+                  <Product.Image src={product.image} alt={product.name} />
 
-                <Product.Price>{product.price}</Product.Price>
+                  <Product.Title>{product.name}</Product.Title>
 
-                <Product.Button />
-              </Product.Card>
-            ))}
+                  <Product.Price>{product.price}</Product.Price>
+
+                  <Product.Button />
+                </Product.Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>
