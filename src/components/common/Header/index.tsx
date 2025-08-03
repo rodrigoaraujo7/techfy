@@ -105,11 +105,13 @@ export const Header = () => {
   );
 };
 
-const NavItem = ({ children, ...props }: NavItemProps) => (
-  <Link
-    className="hover:text-white-100 flex cursor-pointer items-center gap-2 text-gray-600"
-    {...props}
-  >
-    {children}
-  </Link>
-);
+const NavItem = ({ children, ...props }: NavItemProps) => {
+  return (
+    <Link
+      className="hover:text-white-100 flex cursor-pointer items-center gap-2 text-gray-600"
+      {...props}
+    >
+      {children}
+    </Link>
+  );
+};

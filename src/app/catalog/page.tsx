@@ -5,7 +5,7 @@ import { fetchProducts } from "../../../server/products";
 
 import { Product } from "@/components/ui/Product";
 
-function Catalog() {
+function CatalogPage() {
   const { data } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
@@ -53,4 +53,4 @@ function Catalog() {
   );
 }
 
-export default Catalog;
+export default CatalogPage;
