@@ -19,7 +19,7 @@ export const SectionProducts = () => {
     <section className="main-grid bg-white-100 py-14">
       <div className="main-cell-position">
         <div className="grid grid-cols-2 gap-4 px-4 md:grid-cols-3 lg:grid-cols-4 xl:px-0">
-          {data?.map((product) => (
+          {data?.slice(0, 8).map((product) => (
             <Product.Card key={product.id}>
               <Product.FavoriteButton />
 
