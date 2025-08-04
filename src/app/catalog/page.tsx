@@ -4,6 +4,12 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../../../server/products";
 
 import { Product } from "@/components/ui/Product";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 function CatalogPage() {
   const { data } = useQuery({
@@ -21,7 +27,23 @@ function CatalogPage() {
 
       <div className="main-grid">
         <div className="main-cell-position mx-4 mt-9 mb-[72px] flex flex-col gap-5 lg:mx-2 lg:my-6 lg:flex-row lg:gap-8 xl:mx-0">
-          <div className="h-[64px] w-full bg-red-100 lg:sticky lg:w-[256px]" />
+          <div className="w-full lg:sticky lg:top-[150px] lg:h-fit lg:w-[256px]">
+            <Accordion type="single" collapsible>
+              <AccordionItem value="price">
+                <AccordionTrigger>Price</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="brand">
+                <AccordionTrigger>Brand</AccordionTrigger>
+                <AccordionContent>
+                  Yes. It adheres to the WAI-ARIA design pattern.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
 
           <div className="lg:flex-1">
             <div className="mb-6 flex w-full items-center justify-between">
