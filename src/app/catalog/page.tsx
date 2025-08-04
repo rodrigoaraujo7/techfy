@@ -10,6 +10,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Input } from "@/components/ui/Input";
+import { Search } from "lucide-react";
 
 function CatalogPage() {
   const { data } = useQuery({
@@ -32,7 +34,13 @@ function CatalogPage() {
               <AccordionItem value="price">
                 <AccordionTrigger>Price</AccordionTrigger>
                 <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
+                  <Input.Container>
+                    <Input.Label>From</Input.Label>
+                    <Input.Wrapper>
+                      <Input.Field placeholder="0" />
+                      <Search />
+                    </Input.Wrapper>
+                  </Input.Container>
                 </AccordionContent>
               </AccordionItem>
 
