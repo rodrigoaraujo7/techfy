@@ -28,7 +28,8 @@ function CatalogPage() {
   const minPriceParam = searchParams.get("minPrice") ?? "";
   const maxPriceParam = searchParams.get("maxPrice") ?? "";
   const searchParam = searchParams.get("search") ?? "";
-  const brandParam = searchParams.get("brand");
+  const brandParam = searchParams.get("brand") ?? "";
+  const categoryParam = searchParams.get("category") ?? "";
 
   const [search, setSearch] = useState(searchParam);
   const [minPrice, setMinPrice] = useState(minPriceParam);
@@ -79,12 +80,37 @@ function CatalogPage() {
       (p) => p.price <= Number(maxPrice),
     );
   }
+  if (categoryParam) {
+    filteredProducts = filteredProducts.filter(
+      (p) => p.category === categoryParam,
+    );
+  }
 
   return (
     <section className="bg-white-100">
       <div className="hidden w-full grid-cols-1 py-11 lg:grid lg:px-2 xl:grid-cols-[1fr_1120px_1fr] xl:px-0">
-        <div className="main-cell-position w-full">
-          <h1>Catalog</h1>
+        <div className="main-cell-position flex w-full items-center gap-4">
+          <Link href={"/"}>
+            <h1 className="text-zinc-200 hover:underline">Home</h1>
+          </Link>
+          <Link href={"/catalog"}>
+            <h1
+              className={
+                categoryParam
+                  ? "text-zinc-200 hover:underline"
+                  : "text-black-500 hover:underline"
+              }
+            >
+              Catalog
+            </h1>
+          </Link>
+          {categoryParam && (
+            <Link href={`/catalog?category=${categoryParam}`}>
+              <h1 className="text-black-500 text-base hover:underline">
+                {categoryParam.charAt(0).toUpperCase() + categoryParam.slice(1)}
+              </h1>
+            </Link>
+          )}
         </div>
       </div>
 
