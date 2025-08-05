@@ -92,10 +92,10 @@ export const Header = () => {
           <div className="bg-dark-300 h-full w-[1px]" />
 
           <NavItem
-            href={{ pathname: "/catalog", query: { category: "gaming" } }}
+            href={{ pathname: "/catalog", query: { category: "earbuds" } }}
           >
-            <icon.Gamepad size={16} />
-            <span className="text-sm">Gaming</span>
+            <icon.Ear size={16} />
+            <span className="text-sm">Earbuds</span>
           </NavItem>
         </div>
       </nav>
