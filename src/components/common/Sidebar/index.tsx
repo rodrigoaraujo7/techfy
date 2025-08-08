@@ -14,6 +14,12 @@ export const Sidebar = () => {
   const { products, decrementProduct, incrementProduct, handleCartView } =
     useCartStore((state) => state);
 
+  const totalPrice = Math.floor(
+    products.reduce((acc, product) => {
+      return acc + product.price * product.quantity;
+    }, 0),
+  );
+
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
     return () => {
@@ -92,7 +98,7 @@ export const Sidebar = () => {
         <div>
           <div className="mb-4 flex w-full items-center justify-between">
             <h2 className="text-xl font-medium">Total</h2>
-            <h2 className="text-xl font-medium">$00000.00</h2>
+            <h2 className="text-xl font-medium">${totalPrice}</h2>
           </div>
 
           <Button className="w-full">Checkout</Button>
