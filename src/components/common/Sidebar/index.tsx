@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
 import * as icon from "lucide-react";
+import Image from "next/image";
 
 export const Sidebar = () => {
   const { products, decrementProduct, incrementProduct, handleCartView } =
@@ -38,9 +39,16 @@ export const Sidebar = () => {
           {products.map((product, index) => (
             <div
               key={index}
-              className="flex w-full items-center justify-between gap-4"
+              className="flex w-full items-center justify-between gap-4 border-b-[0.5px] border-gray-700 pb-4"
             >
-              <div className="h-[96px] w-[80px] shrink-0 rounded-sm bg-red-200" />
+              <div className="relative h-4/5 w-[80px] shrink-0 rounded-sm">
+                <Image
+                  src={product.image}
+                  fill
+                  alt={product.name}
+                  sizes="80px"
+                />
+              </div>
 
               <div className="flex h-full flex-[1] flex-col justify-center gap-1">
                 <h2 className="line-clamp-1 w-full text-sm font-semibold break-words">
@@ -52,7 +60,10 @@ export const Sidebar = () => {
                 <div className="flex items-center gap-2">
                   <Input.Container className="w-fit">
                     <Input.Wrapper>
-                      <span onClick={() => decrementProduct(product.id)}>
+                      <span
+                        className="cursor-pointer px-2 py-0.5"
+                        onClick={() => decrementProduct(product.id)}
+                      >
                         -
                       </span>
                       <div className="w-[15px]">
@@ -64,7 +75,10 @@ export const Sidebar = () => {
                           className="text-center"
                         />
                       </div>
-                      <span onClick={() => incrementProduct(product.id)}>
+                      <span
+                        className="cursor-pointer px-2 py-0.5"
+                        onClick={() => incrementProduct(product.id)}
+                      >
                         +
                       </span>
                     </Input.Wrapper>

@@ -1,11 +1,15 @@
 "use client";
 
+import { useCartStore } from "@/providers/cart-provider";
+
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../../../../server/products";
 
 import { Product } from "@/components/ui/Product";
 
 export const SectionProducts = () => {
+  const { addProduct } = useCartStore((state) => state);
+
   const { data, error, isError, isLoading } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
@@ -40,7 +44,7 @@ export const SectionProducts = () => {
 
               <Product.Price>{product.price}</Product.Price>
 
-              <Product.Button />
+              <Product.Button onClick={() => addProduct(product)} />
             </Product.Card>
           ))}
         </div>
