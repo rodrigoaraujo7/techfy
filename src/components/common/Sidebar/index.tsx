@@ -2,12 +2,18 @@
 
 import { useEffect } from "react";
 
-import * as icon from "lucide-react";
+import { useCartStore } from "@/providers/cart-provider";
 
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
+import * as icon from "lucide-react";
+
 export const Sidebar = () => {
+  const { products, decrementProduct, incrementProduct } = useCartStore(
+    (state) => state,
+  );
+
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
     return () => {
@@ -25,7 +31,7 @@ export const Sidebar = () => {
         </div>
 
         <div className="flex flex-[1] flex-col gap-6 overflow-auto px-1">
-          {Array.from({ length: 5 }).map((_, index) => (
+          {products.map((product, index) => (
             <div
               key={index}
               className="flex w-full items-center justify-between gap-4"
@@ -34,24 +40,29 @@ export const Sidebar = () => {
 
               <div className="flex h-full flex-[1] flex-col justify-center gap-1">
                 <h2 className="line-clamp-1 w-full text-sm font-semibold break-words">
-                  Item Item Item Item Item Item Item
+                  {product.name}
                 </h2>
 
-                <span className="text-sm font-semibold">$000</span>
+                <span className="text-sm font-semibold">${product.price}</span>
 
                 <div className="flex items-center gap-2">
                   <Input.Container className="w-fit">
                     <Input.Wrapper>
-                      <span onClick={() => {}}>-</span>
+                      <span onClick={() => decrementProduct(product.id)}>
+                        -
+                      </span>
                       <div className="w-[15px]">
                         <Input.Field
                           type="number"
-                          value={0}
+                          value={product.quantity}
+                          max={9}
                           onChange={() => {}}
                           className="text-center"
                         />
                       </div>
-                      <span onClick={() => {}}>+</span>
+                      <span onClick={() => incrementProduct(product.id)}>
+                        +
+                      </span>
                     </Input.Wrapper>
                   </Input.Container>
                 </div>

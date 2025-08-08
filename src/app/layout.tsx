@@ -7,6 +7,7 @@ import { Footer } from "@/components/common/Footer";
 import { Header } from "@/components/common/Header";
 
 import ProductProvider from "@/providers/ProductProvider";
+import { CartStoreProvider } from "@/providers/cart-provider";
 
 export const metadata: Metadata = {
   title: "Techfy",
@@ -27,11 +28,13 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <ProductProvider>
-          <Header />
+          <CartStoreProvider>
+            <Header />
 
-          <main className="mt-[88px] md:mt-[136px]">{children}</main>
+            <main className="mt-[88px] md:mt-[136px]">{children}</main>
 
-          <Footer />
+            <Footer />
+          </CartStoreProvider>
         </ProductProvider>
       </body>
     </html>

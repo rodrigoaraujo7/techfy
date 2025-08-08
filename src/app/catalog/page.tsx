@@ -8,6 +8,8 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { fetchProducts } from "../../../server/products";
 
+import { useCartStore } from "@/providers/cart-provider";
+
 import { Product } from "@/components/ui/Product";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/Input";
@@ -34,6 +36,8 @@ function CatalogPage() {
   const [search, setSearch] = useState(searchParam);
   const [minPrice, setMinPrice] = useState(minPriceParam);
   const [maxPrice, setMaxPrice] = useState(maxPriceParam);
+
+  const { addProduct } = useCartStore((state) => state);
 
   const { data } = useQuery({
     queryKey: ["products"],
@@ -213,7 +217,7 @@ function CatalogPage() {
 
                   <Product.Price>{product.price}</Product.Price>
 
-                  <Product.Button />
+                  <Product.Button onClick={() => addProduct(product)} />
                 </Product.Card>
               ))}
             </div>

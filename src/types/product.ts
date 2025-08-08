@@ -13,3 +13,7 @@ export type Product = {
     | "tablet";
   specs: Record<string, string>;
 };
+
+export type CartProduct = Product & {
+  quantity: number;
+};
