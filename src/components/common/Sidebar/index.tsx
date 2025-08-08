@@ -10,9 +10,8 @@ import { Input } from "@/components/ui/Input";
 import * as icon from "lucide-react";
 
 export const Sidebar = () => {
-  const { products, decrementProduct, incrementProduct } = useCartStore(
-    (state) => state,
-  );
+  const { products, decrementProduct, incrementProduct, handleCartView } =
+    useCartStore((state) => state);
 
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
@@ -27,7 +26,12 @@ export const Sidebar = () => {
         <div className="flex items-center justify-between gap-4">
           <h1 className="text-2xl font-medium">Cart</h1>
 
-          <icon.X size={24} color="#aaaaaa" />
+          <icon.X
+            size={24}
+            color="#aaaaaa"
+            onClick={() => handleCartView()}
+            cursor={"pointer"}
+          />
         </div>
 
         <div className="flex flex-[1] flex-col gap-6 overflow-auto px-1">

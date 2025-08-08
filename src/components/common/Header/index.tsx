@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCartStore } from "@/providers/cart-provider";
 
 import Image from "next/image";
 import Link, { LinkProps } from "next/link";
@@ -14,7 +14,7 @@ type NavItemProps = LinkProps & {
 };
 
 export const Header = () => {
-  const [displaySidebar, setDisplaySidebar] = useState<boolean>(false);
+  const { handleCartView, isOpened } = useCartStore((state) => state);
 
   return (
     <header className="fixed top-0 right-0 left-0 z-[1]">
@@ -39,7 +39,7 @@ export const Header = () => {
               size={20}
               strokeWidth={1.5}
               className="cursor-pointer"
-              onClick={() => setDisplaySidebar(true)}
+              onClick={handleCartView}
             />
             <icon.User size={20} strokeWidth={1.5} className="cursor-pointer" />
           </div>
@@ -48,7 +48,7 @@ export const Header = () => {
             size={32}
             strokeWidth={1.5}
             className="cursor-pointer md:hidden"
-            onClick={() => setDisplaySidebar(true)}
+            onClick={handleCartView}
           />
         </div>
       </div>
@@ -100,7 +100,7 @@ export const Header = () => {
         </div>
       </nav>
 
-      {displaySidebar && <Sidebar />}
+      {isOpened && <Sidebar />}
     </header>
   );
 };

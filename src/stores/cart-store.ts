@@ -3,10 +3,12 @@ import { createStore } from "zustand/vanilla";
 import { CartProduct, Product } from "@/types/product";
 
 export type CartState = {
+  isOpened: boolean;
   products: CartProduct[];
 };
 
 export type CartActions = {
+  handleCartView: () => void;
   addProduct: (product: Product) => void;
   removeProduct: (id: number) => void;
   incrementProduct: (id: number) => void;
@@ -16,12 +18,17 @@ export type CartActions = {
 export type CartStore = CartState & CartActions;
 
 export const defaultInitState: CartState = {
+  isOpened: false,
   products: [],
 };
 
 export const createCartStore = (initState: CartState = defaultInitState) => {
   return createStore<CartStore>()((set) => ({
     ...initState,
+    handleCartView: () =>
+      set((state) => ({
+        isOpened: !state.isOpened,
+      })),
     addProduct: (product) =>
       set((state) => ({
         products: [...state.products, { ...product, quantity: 1 }],
