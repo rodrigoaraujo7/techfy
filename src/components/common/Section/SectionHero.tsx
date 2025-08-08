@@ -18,7 +18,7 @@ export const SectionHero = () => {
             <Button variant={"light"}>Shop Now</Button>
           </div>
 
-          <div className="absolute -bottom-4/5 min-h-[789px] min-w-[288] md:relative md:-bottom-[15%] lg:absolute lg:right-0 lg:-bottom-1/2">
+          <div className="absolute -bottom-[555px] min-h-[789px] min-w-[288] md:relative md:-bottom-[15%] lg:absolute lg:right-0 lg:-bottom-1/2">
             <Image
               priority
               src={"/images/iphone.png"}
