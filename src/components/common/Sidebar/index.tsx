@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import * as icon from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 
 export const Sidebar = () => {
   useEffect(() => {
@@ -31,11 +32,29 @@ export const Sidebar = () => {
             >
               <div className="h-[96px] w-[80px] shrink-0 rounded-sm bg-red-200" />
 
-              <div className="flex h-full flex-[1] flex-col justify-center gap-2">
-                <h2 className="line-clamp-2 w-full text-sm font-semibold break-words">
-                  Item
+              <div className="flex h-full flex-[1] flex-col justify-center gap-1">
+                <h2 className="line-clamp-1 w-full text-sm font-semibold break-words">
+                  Item Item Item Item Item Item Item
                 </h2>
+
                 <span className="text-sm font-semibold">$000</span>
+
+                <div className="flex items-center gap-2">
+                  <Input.Container className="w-fit">
+                    <Input.Wrapper>
+                      <span onClick={() => {}}>-</span>
+                      <div className="w-[15px]">
+                        <Input.Field
+                          type="number"
+                          value={0}
+                          onChange={() => {}}
+                          className="text-center"
+                        />
+                      </div>
+                      <span onClick={() => {}}>+</span>
+                    </Input.Wrapper>
+                  </Input.Container>
+                </div>
               </div>
             </div>
           ))}
