@@ -17,7 +17,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Loading from "./loading";
 
 import * as icon from "lucide-react";
 
@@ -36,7 +35,7 @@ function CatalogPage() {
   const [minPrice, setMinPrice] = useState(minPriceParam);
   const [maxPrice, setMaxPrice] = useState(maxPriceParam);
 
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
   });
@@ -86,8 +85,6 @@ function CatalogPage() {
       (p) => p.category === categoryParam,
     );
   }
-
-  if (isLoading) return <Loading />;
 
   return (
     <section className="bg-white-100">

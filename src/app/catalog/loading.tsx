@@ -1,13 +1,6 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
-
 import { Product } from "@/components/ui/Product";
 
-export default function Loading() {
-  const searchParams = useSearchParams();
-  const category = searchParams.get("category");
-
+export default function CatalogLoading() {
   return (
     <div className="animate-pulse">
       <div className="hidden w-full grid-cols-1 py-11 lg:grid lg:px-2 xl:grid-cols-[1fr_1120px_1fr] xl:px-0">
@@ -15,10 +8,6 @@ export default function Loading() {
           <div className="h-[24px] w-[44px] rounded-full bg-gray-300" />
 
           <div className="h-[24px] w-[58px] rounded-full bg-gray-300" />
-
-          {category && (
-            <div className="h-[24px] w-[100px] rounded-full bg-gray-300" />
-          )}
         </div>
       </div>
 
