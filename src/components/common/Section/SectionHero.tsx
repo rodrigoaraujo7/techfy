@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/Button";
 
@@ -15,7 +16,9 @@ export const SectionHero = () => {
             <h2 className="text-lg font-medium text-neutral-300 md:text-sm lg:text-lg">
               Created to change everything for the better. For everyone
             </h2>
-            <Button variant={"light"}>Shop Now</Button>
+            <Link href={"/catalog"}>
+              <Button variant={"light"}>Shop Now</Button>
+            </Link>
           </div>
 
           <div className="absolute -bottom-[555px] min-h-[789px] min-w-[288] md:relative md:-bottom-[15%] lg:absolute lg:right-0 lg:-bottom-1/2">
@@ -107,9 +110,11 @@ export const SectionHero = () => {
               with a spacious Liquid Retina display.
             </h2>
 
-            <Button variant="dark" className="lg:w-fit">
-              Shop Now
-            </Button>
+            <Link href="/catalog">
+              <Button variant="dark" className="lg:w-fit">
+                Shop Now
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
