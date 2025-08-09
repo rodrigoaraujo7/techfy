@@ -1,35 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+  Techfy
+</h1>
 
-## Getting Started
+<p align="center">
+  <a href="#participants">Participants</a> •
+  <a href="#techs">Techs</a> •
+  <a href="#usage">Usage</a>
+</p>
 
-First, run the development server:
+<div align="center">
+  <!-- <img src="https://i.imgur.com/FAzPDZb.png" /> -->
+</div>
+
+## Participants
+
+| [<img src="https://avatars.githubusercontent.com/rodrigoaraujo7" width="75px;"/>](https://github.com/rodrigoaraujo7) |
+| :------------------------------------------------------------------------------------------------------------------: |
+
+| [Rodrigo Leite Araujo](https://github.com/rodrigoaraujo7)
+
+## Techs
+
+- [x] Next 15
+- [x] TypeScript
+- [x] Tailwind CSS
+- [x] Tanstack Query
+- [x] Zustand
+- [x] ShadcnUI
+- [x] Framer Motion
+- [x] Docker
+- [x] Storybook
+
+## How to download the project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+$ git clone https://github.com/rodrigoaraujo7/techfy.git
+
+# Enter directory
+$ cd techfy
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Run `npm install`.<br />
+2. Run `npm run dev` and access `http://localhost:3000/`<br />
 
-## Learn More
+<br/>
 
-To learn more about Next.js, take a look at the following resources:
+## Storybook
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Run `npm run storybook`<br />
+2. Access `http://localhost:6006`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<br />
 
-## Deploy on Vercel
+## Create Docker Container
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Run `docker compose up --build`<br />
+2. Access `http://localhost:3000/`<br />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# techfy
+<br />
+
+## Install new dependencies in Docker Container
+
+1. Stop container<br />
+2. Run `docker exec -it techfy-nextjs-1 sh`<br />
+3. Run `npm install new-lib`<br />
+4. Run `exit`<br />
+5. Start container<br />
+
+<br />
+
+<p align="center"> Developed by <a href="https://www.linkedin.com/in/rodrigoleitearaujo">Rodrigo Leite Araujo</a> ⚓</p>
