@@ -4,11 +4,13 @@ import { useEffect } from "react";
 
 import { useCartStore } from "@/providers/cart-provider";
 
+import Image from "next/image";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 
 import * as icon from "lucide-react";
-import Image from "next/image";
 
 export const Sidebar = () => {
   const { products, decrementProduct, incrementProduct, handleCartView } =
@@ -36,7 +38,7 @@ export const Sidebar = () => {
           <icon.X
             size={24}
             color="#aaaaaa"
-            onClick={() => handleCartView()}
+            onClick={handleCartView}
             cursor={"pointer"}
           />
         </div>
@@ -101,7 +103,13 @@ export const Sidebar = () => {
             <h2 className="text-xl font-medium">${totalPrice}</h2>
           </div>
 
-          <Button className="w-full">Checkout</Button>
+          <Link
+            href={"/checkout"}
+            className={products.length > 0 ? "" : "pointer-events-none"}
+            onNavigate={handleCartView}
+          >
+            <Button className="w-full">Checkout</Button>
+          </Link>
         </div>
       </div>
     </div>
