@@ -30,9 +30,21 @@ export const createCartStore = (initState: CartState = defaultInitState) => {
         isOpened: !state.isOpened,
       })),
     addProduct: (product) =>
-      set((state) => ({
-        products: [...state.products, { ...product, quantity: 1 }],
-      })),
+      set((state) => {
+        const existingProduct = state.products.find((p) => p.id === product.id);
+
+        if (existingProduct) {
+          return {
+            products: state.products.map((p) =>
+              p.id === product.id ? { ...p, quantity: p.quantity + 1 } : p,
+            ),
+          };
+        }
+
+        return {
+          products: [...state.products, { ...product, quantity: 1 }],
+        };
+      }),
     removeProduct: (id) =>
       set((state) => ({
         products: state.products.filter((product) => product.id !== id),
