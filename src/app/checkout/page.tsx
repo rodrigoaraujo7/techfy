@@ -1,8 +1,10 @@
 "use client";
 
-import { Input } from "@/components/ui/Input";
-import { useCartStore } from "@/providers/cart-provider";
 import Image from "next/image";
+
+import { Input } from "@/components/ui/Input";
+
+import { useCartStore } from "@/providers/cart-provider";
 
 export default function CheckoutPage() {
   const { products, incrementProduct, decrementProduct } = useCartStore(
@@ -11,9 +13,9 @@ export default function CheckoutPage() {
 
   return (
     <section className="bg-white-100">
-      <div className="main-grid">
-        <div className="main-cell-position mx-4 my-10 grid h-dvh grid-cols-1 grid-rows-2 gap-[70px] lg:grid-cols-2 lg:grid-rows-1 lg:gap-12 xl:mx-0">
-          <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex h-full flex-col gap-10">
+      <div className="main-grid px-4 py-10 lg:h-[calc(100dvh-136px)]">
+        <div className="main-cell-position grid grid-cols-1 grid-rows-2 gap-[70px] lg:h-full lg:grid-cols-2 lg:grid-rows-1 lg:gap-12 lg:overflow-auto xl:mx-0">
+          <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex h-full flex-col gap-10 lg:h-full">
             <h1 className="text-2xl font-medium">Cart</h1>
 
             <div className="flex h-full flex-col gap-6 overflow-auto">
