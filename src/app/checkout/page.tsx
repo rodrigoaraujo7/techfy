@@ -25,7 +25,7 @@ export default function CheckoutPage() {
           <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-10 md:h-full">
             <h1 className="text-2xl font-medium">Cart</h1>
 
-            <div className="flex h-full flex-col gap-6 overflow-auto">
+            <div className="scrollbar flex h-full flex-col gap-6 overflow-auto md:pr-2">
               {products.map((product, index) => (
                 <div
                   key={index}

@@ -43,7 +43,7 @@ export const Sidebar = () => {
           />
         </div>
 
-        <div className="flex flex-[1] flex-col gap-6 overflow-auto px-1">
+        <div className="scrollbar flex flex-[1] flex-col gap-6 overflow-auto px-1">
           {products.map((product, index) => (
             <div
               key={index}
