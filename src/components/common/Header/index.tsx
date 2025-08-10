@@ -7,6 +7,8 @@ import Link, { LinkProps } from "next/link";
 
 import { Sidebar } from "../Sidebar";
 
+import { AnimatePresence } from "motion/react";
+
 import * as icon from "lucide-react";
 
 type NavItemProps = LinkProps & {
@@ -100,7 +102,7 @@ export const Header = () => {
         </div>
       </nav>
 
-      {isOpened && <Sidebar />}
+      <AnimatePresence mode="wait">{isOpened && <Sidebar />}</AnimatePresence>
     </header>
   );
 };
