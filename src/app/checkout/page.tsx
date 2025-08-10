@@ -5,10 +5,17 @@ import Image from "next/image";
 import { Input } from "@/components/ui/Input";
 
 import { useCartStore } from "@/providers/cart-provider";
+import { Button } from "@/components/ui/Button";
 
 export default function CheckoutPage() {
   const { products, incrementProduct, decrementProduct } = useCartStore(
     (state) => state,
+  );
+
+  const totalPrice = Math.floor(
+    products.reduce((acc, product) => {
+      return acc + product.price * product.quantity;
+    }, 0),
   );
 
   return (
@@ -75,7 +82,26 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <div className="bg-black-200 col-start-1 col-end-2 row-start-2 row-end-3 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2" />
+          <div className="border-white-500 justify-center-center col-start-1 col-end-2 row-start-2 row-end-3 flex h-fit flex-col gap-10 rounded-xl border-[1px] px-4 py-14 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:px-16">
+            <h1 className="text-xl font-bold">Order Summary</h1>
+
+            <div>
+              <Input.Container>
+                <Input.Label>Discount code / Promo code</Input.Label>
+
+                <Input.Wrapper>
+                  <Input.Field type="text" placeholder="Code" />
+                </Input.Wrapper>
+              </Input.Container>
+
+              <div className="mt-4 flex w-full items-center justify-between">
+                <h2 className="text-xl font-medium">Total</h2>
+                <h2 className="text-xl font-medium">${totalPrice}</h2>
+              </div>
+            </div>
+
+            <Button className="w-full">Checkout</Button>
+          </div>
         </div>
       </div>
     </section>
