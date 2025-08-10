@@ -1,8 +1,17 @@
+"use client";
+
 import { Product } from "@/components/ui/Product";
+
+import { motion } from "motion/react";
 
 export default function CatalogLoading() {
   return (
-    <div className="animate-pulse">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="animate-pulse"
+    >
       <div className="hidden w-full grid-cols-1 py-11 lg:grid lg:px-2 xl:grid-cols-[1fr_1120px_1fr] xl:px-0">
         <div className="main-cell-position flex w-full items-center gap-4">
           <div className="h-[24px] w-[44px] rounded-full bg-gray-300" />
@@ -26,6 +35,6 @@ export default function CatalogLoading() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

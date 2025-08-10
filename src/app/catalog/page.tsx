@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/accordion";
 
 import * as icon from "lucide-react";
+import CatalogLoading from "./loading";
 
 function CatalogPage() {
   const router = useRouter();
@@ -39,7 +40,7 @@ function CatalogPage() {
 
   const { addProduct } = useCartStore((state) => state);
 
-  const { data } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
   });
@@ -89,6 +90,8 @@ function CatalogPage() {
       (p) => p.category === categoryParam,
     );
   }
+
+  if (isLoading) return <CatalogLoading />;
 
   return (
     <section className="bg-white-100">
