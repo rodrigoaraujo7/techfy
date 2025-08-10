@@ -20,9 +20,9 @@ export default function CheckoutPage() {
 
   return (
     <section className="bg-white-100">
-      <div className="main-grid px-4 py-10 lg:h-[calc(100dvh-136px)]">
-        <div className="main-cell-position grid grid-cols-1 grid-rows-2 gap-[70px] lg:h-full lg:grid-cols-2 lg:grid-rows-1 lg:gap-12 lg:overflow-auto xl:mx-0">
-          <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex h-full flex-col gap-10 lg:h-full">
+      <div className="main-grid px-4 py-10 md:h-[calc(100dvh-136px)]">
+        <div className="main-cell-position flex flex-col gap-[70px] overflow-auto md:grid md:h-full md:grid-cols-2 md:grid-rows-1 md:gap-12 xl:mx-0">
+          <div className="col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-10 md:h-full">
             <h1 className="text-2xl font-medium">Cart</h1>
 
             <div className="flex h-full flex-col gap-6 overflow-auto">
@@ -82,7 +82,7 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <div className="border-white-500 justify-center-center col-start-1 col-end-2 row-start-2 row-end-3 flex h-fit flex-col gap-10 rounded-xl border-[1px] px-4 py-14 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:px-16">
+          <div className="border-white-500 justify-center-center col-start-1 col-end-2 row-start-2 row-end-3 flex h-fit flex-col gap-10 rounded-xl border-[1px] px-4 py-14 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2 md:px-16">
             <h1 className="text-xl font-bold">Order Summary</h1>
 
             <div>
