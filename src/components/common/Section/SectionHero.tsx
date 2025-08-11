@@ -16,7 +16,7 @@ export const SectionHero = () => {
             <h2 className="text-lg font-medium text-neutral-300 md:text-sm lg:text-lg">
               Created to change everything for the better. For everyone
             </h2>
-            <Link href={"/catalog"} prefetch={false}>
+            <Link href={"/catalog"}>
               <Button variant={"light"}>Shop Now</Button>
             </Link>
           </div>

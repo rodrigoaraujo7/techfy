@@ -5,7 +5,6 @@ function Home() {
     <>
       <Section.Hero />
       <Section.Products />
-      <Section.Banner />
     </>
   );
 }
