@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-  <!-- <img src="https://i.imgur.com/FAzPDZb.png" /> -->
+  <img src="https://i.imgur.com/XjLVQVm.png" />
 </div>
 
 ## Participants
