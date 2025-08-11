@@ -1,4 +1,8 @@
+"use client";
+
 import { ComponentProps } from "react";
+
+import { motion, type MotionProps } from "motion/react";
 
 import { tv, type VariantProps } from "tailwind-variants";
 
@@ -22,6 +26,7 @@ const button = tv({
 });
 
 type ButtonProps = ComponentProps<"button"> &
+  MotionProps &
   VariantProps<typeof button> & {
     children: React.ReactNode;
   };
@@ -34,8 +39,15 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <button className={button({ variant, size, className })} {...props}>
+    <motion.button
+      className={button({ variant, size, className })}
+      whileTap={{
+        scale: 0.95,
+        transition: { duration: 0.025 },
+      }}
+      {...props}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 };

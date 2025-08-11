@@ -1,6 +1,8 @@
+import { MotionProps } from "motion/react";
+
 import { Button } from "../Button";
 
-type ProductButtonProps = React.ComponentProps<"button">;
+type ProductButtonProps = React.ComponentProps<"button"> & MotionProps;
 
 export const ProductButton = ({ ...props }: ProductButtonProps) => {
   return (

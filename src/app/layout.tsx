@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   title: "Techfy",
   description: "Virtual store for tech products",
   icons: {
-    icon: [{ url: "/images/favicon.ico" }],
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon.ico" }],
   },
 };
 
