@@ -21,7 +21,3 @@ export const Products: Story = {
     </ProductProvider>
   ),
 };
-
-export const Banner: Story = {
-  render: () => <Section.Banner />,
-};
