@@ -7,7 +7,7 @@ import Link, { LinkProps } from "next/link";
 
 import { Sidebar } from "../Sidebar";
 
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 
 import * as icon from "lucide-react";
 
@@ -16,7 +16,13 @@ type NavItemProps = LinkProps & {
 };
 
 export const Header = () => {
-  const { handleCartView, isOpened } = useCartStore((state) => state);
+  const { handleCartView, isOpened, products } = useCartStore((state) => state);
+
+  const totalItems = Math.floor(
+    products.reduce((acc, product) => {
+      return acc + product.quantity;
+    }, 0),
+  );
 
   return (
     <header className="fixed top-0 right-0 left-0 z-[1]">
@@ -37,12 +43,28 @@ export const Header = () => {
               strokeWidth={1.5}
               className="cursor-pointer"
             />
-            <icon.ShoppingCart
-              size={20}
-              strokeWidth={1.5}
-              className="cursor-pointer"
-              onClick={handleCartView}
-            />
+
+            <div className="relative cursor-pointer" onClick={handleCartView}>
+              <icon.ShoppingCart size={20} strokeWidth={1.5} />
+
+              <AnimatePresence>
+                {totalItems > 0 && (
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    transition={{
+                      scale: { duration: 0.05 },
+                      type: "spring",
+                    }}
+                    className="bg-dark-1000 text-white-100 absolute -right-3 -bottom-3 flex h-[24px] w-[24px] items-center justify-center rounded-full text-sm"
+                  >
+                    {totalItems}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </div>
+
             <icon.User size={20} strokeWidth={1.5} className="cursor-pointer" />
           </div>
 
